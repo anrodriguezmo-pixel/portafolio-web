@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import HexPattern from "./HexPattern";
+import Grainient from "./Grainient";
 
 export default function Hero() {
   return (
@@ -9,7 +10,31 @@ export default function Hero() {
       className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden bg-crema"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -right-24 -top-24 w-[560px] h-[560px] opacity-70">
+        {/* Soft animated aura in brand colors — the blur hides the hard canvas edges */}
+        <div className="absolute -right-24 -top-24 w-[420px] h-[420px] sm:-right-40 sm:-top-40 sm:w-[720px] sm:h-[720px] blur-3xl opacity-35 sm:opacity-60 mix-blend-multiply">
+          <Grainient
+            className="w-full h-full"
+            color1="#F5EFE3"
+            color2="#C8272D"
+            color3="#1A1A1A"
+            timeSpeed={0.15}
+            colorBalance={0.05}
+            warpStrength={1.2}
+            warpFrequency={3}
+            warpSpeed={1}
+            warpAmplitude={70}
+            blendSoftness={0.18}
+            rotationAmount={280}
+            noiseScale={1.5}
+            grainAmount={0.03}
+            grainScale={2}
+            contrast={1.1}
+            gamma={1.0}
+            saturation={0.85}
+            zoom={1.2}
+          />
+        </div>
+        <div className="absolute -right-24 -top-24 w-[560px] h-[560px] opacity-40">
           <HexPattern id="hero" color="#C8272D" opacity={0.12} />
         </div>
       </div>
