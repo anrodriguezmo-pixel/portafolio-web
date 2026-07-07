@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import "@fontsource/montserrat/300.css";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/big-shoulders/700.css";
+@import "@fontsource/big-shoulders/800.css";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Big Shoulders", "Montserrat", ui-sans-serif, sans-serif;
+
+  --color-rojo: #c8272d;
+  --color-rojo-dim: #a11f24;
+  --color-tinta: #1a1a1a;
+  --color-crema: #f5efe3;
+  --color-oro: #c4963a;
+  --color-gris: #8a7f72;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-crema);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-rojo);
+  color: var(--color-crema);
+}
+
+/* thin, brand-colored scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-crema);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gris);
+  border-radius: 999px;
+  border: 2px solid var(--color-crema);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-stroke-tinta {
+  -webkit-text-stroke: 1.5px var(--color-tinta);
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .text-stroke-tinta {
+    -webkit-text-stroke: 1px var(--color-tinta);
+  }
+}
