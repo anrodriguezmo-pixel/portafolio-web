@@ -24,15 +24,6 @@ const VALUES = [
   },
 ];
 
-const SERVICIOS = [
-  "Diseño de producto",
-  "Modelado paramétrico y visualización 3D",
-  "Prototipado y modelos a escala",
-  "Ecodiseño",
-  "Diseño de información y comunicación visual",
-  "Identidad de marca",
-];
-
 export default function About() {
   return (
     <section id="estudio" className="relative bg-crema py-24 md:py-32">
@@ -60,22 +51,10 @@ export default function About() {
               libertad de la experimentación formal.
             </p>
 
-            <div className="mt-10">
-              <p className="text-xs font-semibold tracking-[0.2em] text-rojo mb-3">SERVICIOS</p>
-              <ul className="flex flex-wrap gap-x-2 gap-y-2 text-sm">
-                {SERVICIOS.map((s, i) => (
-                  <li key={s} className="flex items-center">
-                    <span className="px-3 py-1.5 rounded-full border border-tinta/15 text-tinta/80">
-                      {s}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-sm italic text-tinta/50">
-                Proyectos desarrollados entre la academia, la experimentación material y el encargo
-                real.
-              </p>
-            </div>
+            <p className="mt-6 text-sm italic text-tinta/50">
+              Proyectos desarrollados entre la academia, la experimentación material y el encargo
+              real.
+            </p>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 gap-5">
