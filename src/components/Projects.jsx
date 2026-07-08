@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import ScrollReveal from "./ScrollReveal";
+import { GlobalSpotlight, useMobileDetection } from "./GlowCard";
 
 export default function Projects() {
   const [active, setActive] = useState(null);
+  const gridRef = useRef(null);
+  const isMobile = useMobileDetection();
 
   return (
     <section id="proyectos" className="relative bg-crema py-24 md:py-32">
+      <GlobalSpotlight gridRef={gridRef} disableAnimations={isMobile} spotlightRadius={300} glowColor="200, 39, 45" />
+
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
@@ -23,9 +28,15 @@ export default function Projects() {
           <p className="text-tinta/60 text-lg mb-14">Siete casos de diseño que trabaja</p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="glow-section grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            <ProjectCard key={p.id} project={p} onOpen={setActive} delay={(i % 3) * 0.08} />
+            <ProjectCard
+              key={p.id}
+              project={p}
+              onOpen={setActive}
+              delay={(i % 3) * 0.08}
+              disableAnimations={isMobile}
+            />
           ))}
         </div>
       </div>
