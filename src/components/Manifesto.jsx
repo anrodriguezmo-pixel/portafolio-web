@@ -1,12 +1,21 @@
-import HexPattern from "./HexPattern";
+import DarkVeil from "./DarkVeil";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Manifesto() {
   return (
     <section id="manifiesto" className="relative bg-tinta text-crema py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 opacity-40">
-        <HexPattern id="manifiesto" color="#C8272D" opacity={0.5} />
+      <div className="absolute inset-0">
+        <DarkVeil
+          hueShift={-125}
+          noiseIntensity={0.05}
+          scanlineIntensity={0}
+          speed={0.3}
+          scanlineFrequency={0}
+          warpAmount={0.4}
+          resolutionScale={1}
+        />
       </div>
+      <div className="absolute inset-0 bg-tinta/55" />
 
       <div className="relative max-w-3xl mx-auto px-6 md:px-10">
         <ScrollReveal>
