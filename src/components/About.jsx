@@ -1,4 +1,5 @@
 import { Cog, Compass, Layers, Lightbulb } from "lucide-react";
+import GradientText from "./GradientText";
 import ScrollReveal from "./ScrollReveal";
 
 const VALUES = [
@@ -31,9 +32,13 @@ export default function About() {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[3px] w-12 bg-rojo" />
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-tinta/60">
+            <GradientText
+              colors={["#C8272D", "#C4963A", "#C8272D"]}
+              animationSpeed={4}
+              className="text-xs md:text-sm font-semibold tracking-[0.25em]"
+            >
               EL ESTUDIO
-            </span>
+            </GradientText>
           </div>
         </ScrollReveal>
 

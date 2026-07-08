@@ -3,6 +3,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import ScrollReveal from "./ScrollReveal";
+import GradientText from "./GradientText";
 import { GlobalSpotlight, useMobileDetection } from "./GlowCard";
 
 export default function Projects() {
@@ -18,9 +19,13 @@ export default function Projects() {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[3px] w-12 bg-rojo" />
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-tinta/60">
+            <GradientText
+              colors={["#C8272D", "#C4963A", "#C8272D"]}
+              animationSpeed={4}
+              className="text-xs md:text-sm font-semibold tracking-[0.25em]"
+            >
               SELECCIÓN
-            </span>
+            </GradientText>
           </div>
           <h2 className="font-display font-extrabold uppercase text-4xl md:text-6xl mb-3">
             Proyectos

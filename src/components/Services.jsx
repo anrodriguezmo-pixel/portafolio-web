@@ -1,3 +1,4 @@
+import GradientText from "./GradientText";
 import ScrollReveal from "./ScrollReveal";
 
 const SERVICIOS = [
@@ -42,9 +43,13 @@ export default function Services() {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[3px] w-12 bg-rojo" />
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-crema/60">
+            <GradientText
+              colors={["#C8272D", "#C4963A", "#C8272D"]}
+              animationSpeed={4}
+              className="text-xs md:text-sm font-semibold tracking-[0.25em]"
+            >
               SERVICIOS
-            </span>
+            </GradientText>
           </div>
           <h2 className="font-display font-extrabold uppercase text-4xl md:text-6xl text-crema mb-3">
             En qué trabajamos

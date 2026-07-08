@@ -1,4 +1,5 @@
 import { Eye, Share2, Wand2, FlaskConical } from "lucide-react";
+import GradientText from "./GradientText";
 import ScrollReveal from "./ScrollReveal";
 
 const PASOS = [
@@ -35,9 +36,13 @@ export default function Methodology() {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[3px] w-12 bg-rojo" />
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-tinta/60">
+            <GradientText
+              colors={["#C8272D", "#C4963A", "#C8272D"]}
+              animationSpeed={4}
+              className="text-xs md:text-sm font-semibold tracking-[0.25em]"
+            >
               METODOLOGÍA OPERATIVA
-            </span>
+            </GradientText>
           </div>
           <p className="max-w-2xl text-tinta/70 text-lg leading-relaxed mb-16">
             Cuatro fases que convierten un entorno problemático en un producto de alta fidelidad.

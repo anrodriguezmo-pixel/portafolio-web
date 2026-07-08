@@ -1,4 +1,5 @@
 import DarkVeil from "./DarkVeil";
+import GradientText from "./GradientText";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Manifesto() {
@@ -21,9 +22,13 @@ export default function Manifesto() {
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-8">
             <span className="h-[3px] w-12 bg-rojo" />
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-crema/70">
+            <GradientText
+              colors={["#C8272D", "#C4963A", "#C8272D"]}
+              animationSpeed={4}
+              className="text-xs md:text-sm font-semibold tracking-[0.25em]"
+            >
               MANIFIESTO
-            </span>
+            </GradientText>
           </div>
         </ScrollReveal>
 
