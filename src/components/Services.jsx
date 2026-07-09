@@ -1,3 +1,4 @@
+import Ferrofluid from "./Ferrofluid";
 import GradientText from "./GradientText";
 import ScrollReveal from "./ScrollReveal";
 
@@ -38,8 +39,27 @@ const SERVICIOS = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="relative bg-tinta py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <section id="servicios" className="relative bg-tinta py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 opacity-70">
+        <Ferrofluid
+          colors={["#C8272D", "#C4963A", "#8A7F72"]}
+          speed={0.35}
+          scale={1.8}
+          turbulence={0.8}
+          fluidity={0.15}
+          rimWidth={0.22}
+          sharpness={3}
+          shimmer={0.8}
+          glow={1.6}
+          flowDirection="up"
+          opacity={0.9}
+          mouseInteraction={true}
+          mouseStrength={1}
+          mouseRadius={0.3}
+        />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-6">
             <span className="h-[3px] w-12 bg-rojo" />
