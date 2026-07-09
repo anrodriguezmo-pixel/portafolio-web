@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import HexPattern from "./HexPattern";
 import Grainient from "./Grainient";
+import LogoLoader from "./LogoLoader";
 
 export default function Hero() {
   return (
@@ -38,6 +39,15 @@ export default function Hero() {
           <HexPattern id="hero" color="#C8272D" opacity={0.12} />
         </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.94 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        className="hidden lg:block absolute right-10 xl:right-16 top-1/2 -translate-y-1/2 z-10"
+      >
+        <LogoLoader />
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
