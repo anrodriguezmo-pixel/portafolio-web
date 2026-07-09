@@ -26,7 +26,12 @@ export default function ProjectModal({ project, onClose }) {
 
   const hasMeta =
     project &&
-    (project.categoria || project.alcance || project.estado || project.equipo || project.rol);
+    (project.categoria ||
+      project.alcance ||
+      project.estado ||
+      project.equipo ||
+      project.rol ||
+      project.extraMeta?.length > 0);
 
   return (
     <AnimatePresence>
@@ -101,6 +106,9 @@ export default function ProjectModal({ project, onClose }) {
                     <Meta label="ESTADO" value={project.estado} />
                     <Meta label="EQUIPO" value={project.equipo} />
                     <Meta label="ROL" value={project.rol} />
+                    {project.extraMeta?.map((m) => (
+                      <Meta key={m.label} label={m.label} value={m.value} />
+                    ))}
                   </div>
                 )}
               </div>

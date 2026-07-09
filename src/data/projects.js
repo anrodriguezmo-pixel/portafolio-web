@@ -2,17 +2,17 @@ import lumiHero from "../assets/img/lumi-hero.webp";
 import lumiTecho from "../assets/img/lumi-techo.webp";
 import lumiPiso from "../assets/img/lumi-piso.webp";
 import lumiSketch from "../assets/img/lumi-sketch.webp";
-import ecoabonoFull from "../assets/img/ecoabono-full.webp";
-import ecoabonoProduct from "../assets/img/ecoabono-product.webp";
+import acresTerraza from "../assets/img/acres-terraza.webp";
+import acresSocial from "../assets/img/acres-social.webp";
+import acresCocina from "../assets/img/acres-cocina.webp";
 import verhum from "../assets/img/verhum.webp";
 import weepodOpen from "../assets/img/weepod-open.webp";
 import weepodClosed from "../assets/img/weepod-closed.webp";
 import tappetoModel from "../assets/img/tappeto-model.webp";
-import tappetoGraphic from "../assets/img/tappeto-graphic.webp";
 import escarabajo from "../assets/img/escarabajo.webp";
-import grafica1 from "../assets/img/grafica-1.webp";
-import grafica2 from "../assets/img/grafica-2.webp";
-import grafica3 from "../assets/img/grafica-3.webp";
+import mesaProducto from "../assets/img/mesa-producto.webp";
+import mesaContexto1 from "../assets/img/mesa-contexto1.webp";
+import mesaContexto2 from "../assets/img/mesa-contexto2.webp";
 
 export const projects = [
   {
@@ -44,32 +44,43 @@ export const projects = [
       },
       {
         src: lumiSketch,
-        alt: "Sketch de consolidación de ideas del patrón triangular muisca",
-        titulo: "Proceso",
-        texto: "Sketch de consolidación de ideas — patrón triangular muisca aplicado a las tres tipologías.",
+        alt: "Bastidor de techo instalado en una sala de estar",
+        titulo: "En contexto",
+        texto: "El bastidor de techo integrado en una sala: el patrón triangular muisca como pieza central del espacio.",
       },
     ],
   },
   {
-    id: "ecoabono",
+    id: "acres-verdes",
     numero: "02",
-    titulo: "Ecoabono",
-    subtitulo: "Compostera doméstica de vermicompostaje",
-    tags: ["Diseño de producto", "Ecodiseño", "Mecanismos"],
+    titulo: "Acres Verdes",
+    subtitulo: "Arquitectura interior residencial — Sopó, Cundinamarca",
+    tags: ["Interiorismo", "Redistribución espacial", "Visualización"],
     parrafos: [
-      "Compostera doméstica que transforma residuos orgánicos en humus de alta calidad sin salir de la cocina. Un sistema rotatorio de cajones organiza el ciclo completo: los residuos triturados ingresan por la tolva superior, las lombrices procesan el material a través de los compartimentos y el abono terminado sale por la compuerta inferior.",
-      "Madera, acero inoxidable y acrílico: materiales durables y lavables que integran el compostaje al mobiliario doméstico contemporáneo.",
+      "Reforma interior para una casa en clima templado de montaña. La redistribución trabaja tres tipologías espaciales: divisores flotantes que orientan la circulación sin cortar la vista, fugados que dirigen las visuales al paisaje de la sabana de Bogotá, y residuales que activan esquinas muertas como micro-estudios, bibliotecas y almacenamiento empotrado.",
     ],
-    categoria: "Ecodiseño / producto doméstico",
-    alcance: "Diseño de producto, mecanismo rotatorio, CMF, render, pieza gráfica",
-    rol: "Proyecto individual",
-    hero: { src: ecoabonoProduct, alt: "Compostera doméstica Ecoabono — render de producto" },
+    categoria: "Arquitectura interior residencial",
+    alcance: "Arquitectura interior, redistribución, visualización 3D",
+    extraMeta: [
+      { label: "UBICACIÓN", value: "Sopó, Cundinamarca (Colombia)" },
+      {
+        label: "MATERIALES",
+        value: "Pino radiata de plantaciones locales, drywall con aislamiento termoacústico, concreto pulido, barniz base agua libre de COV",
+      },
+    ],
+    hero: { src: acresTerraza, alt: "Terraza de cubierta con fogata — Acres Verdes" },
     galeria: [
       {
-        src: ecoabonoFull,
-        alt: "Ficha de producto de Ecoabono con sistema rotatorio y materiales",
-        titulo: "Ficha de producto",
-        texto: "Sistema rotatorio de cajones y materiales — madera, acero inoxidable y acrílico.",
+        src: acresSocial,
+        alt: "Zona social con chimenea y divisores flotantes de madera",
+        titulo: "Zona social",
+        texto: "Chimenea, divisores flotantes de madera y visuales continuas.",
+      },
+      {
+        src: acresCocina,
+        alt: "Cocina y comedor con isla central e iluminación indirecta",
+        titulo: "Cocina y comedor",
+        texto: "Isla central e iluminación indirecta.",
       },
     ],
   },
@@ -84,7 +95,7 @@ export const projects = [
       "La volumetría vertical reduce la huella en planta y convierte un proceso normalmente oculto en un objeto de presencia escultórica.",
     ],
     categoria: "Ecodiseño / producto doméstico",
-    equipo: "Isabella Cruz, Paula Neira, Andrés Rodríguez, Daniel González",
+    equipo: "Isabella Cruz, Andrés Rodríguez, Daniel González",
     alcance: "Codiseño, modelado 3D, visualización y presentación",
     hero: { src: verhum, alt: "Sistema modular de compostaje Verhum" },
     galeria: [],
@@ -121,15 +132,8 @@ export const projects = [
     ],
     equipo: "David Parra, Karen Chivata, Andrés Rodríguez, Daniela Muñoz",
     alcance: "Análisis morfológico, modelo a escala, pieza editorial",
-    hero: { src: tappetoModel, alt: "Modelo físico seccionado del sillón Tappeto Volante" },
-    galeria: [
-      {
-        src: tappetoGraphic,
-        alt: "Sistema gráfico inspirado en el lenguaje Memphis para Tappeto Volante",
-        titulo: "Sistema gráfico",
-        texto: "Pieza editorial en el lenguaje del Grupo Memphis, con la ficha del referente Ettore Sottsass.",
-      },
-    ],
+    hero: { src: tappetoModel, alt: "Modelo seccionado del sillón Tappeto Volante en contexto" },
+    galeria: [],
   },
   {
     id: "escarabajo-hercules",
@@ -142,23 +146,36 @@ export const projects = [
     ],
     equipo: "Cynthia Obando, Andrés Rodríguez",
     alcance: "Análisis morfológico, ensamble, registro",
-    hero: { src: escarabajo, alt: "Escultura de escarabajo Hércules ensamblada con componentes recuperados" },
+    hero: { src: escarabajo, alt: "Escultura exhibida de escarabajo Hércules ensamblada con componentes recuperados" },
     galeria: [],
   },
   {
-    id: "exploracion-grafica",
+    id: "mesa-fold-it",
     numero: "07",
-    titulo: "Exploración Gráfica",
-    subtitulo: "Composiciones ópticas — patrón, ritmo y profundidad",
-    tags: ["Lenguaje formal", "Dibujo a mano", "Sistemas de patrón"],
+    titulo: "Mesa Fold It",
+    subtitulo: "Mesa auxiliar DIY — Colección Goldenwood",
+    tags: ["Mobiliario", "Flat-pack", "Guadua laminada"],
     parrafos: [
-      "Serie de composiciones en blanco y negro construidas a mano: sistemas de patrón que estudian el ritmo, la vibración óptica y la profundidad. Es la base bidimensional del lenguaje isométrico que atraviesa toda la identidad del estudio.",
+      "Mobiliario auxiliar de armado rápido pensado para que el usuario final lo ensamble con precisión y sin herramientas complejas. El paquete viaja en plano y la estructura se resuelve en guadua, una fuente forestal de rápido crecimiento: encaje machihembrado numerado, tres fases de armado y una mesa lista en minutos.",
+      "Armado en tres fases: cimentación —la base recibe el primer soporte en su ranura guía—, estructuración —los tres soportes restantes entran en encajes numerados— y fijación —los tablones cierran a presión y el kit de tornillos asegura todo.",
     ],
-    cita: "Del patrón bidimensional al objeto tridimensional: la misma lógica estructural gobierna el gráfico, el bastidor y la marca.",
-    hero: { src: grafica1, alt: "Composición óptica en blanco y negro, estudio 1" },
+    categoria: "Mobiliario / flat-pack",
+    alcance: "Diseño de producto, armado DIY, guadua laminada",
+    rol: "Departamento de Diseño Industrial — Universidad Nacional de Colombia",
+    extraMeta: [
+      { label: "DIMENSIONES", value: "35×30×75 cm · tableros de 15 mm · 4,2 kg" },
+      { label: "MATERIALES", value: "Guadua laminada y MDF enchapado; sellador acrílico base agua con filtro UV" },
+      { label: "HERRAJES", value: 'Tornillería pavonada negra de 2" y cincada blanca de 1¼"' },
+    ],
+    hero: { src: mesaProducto, alt: "Mesa auxiliar Fold It — render de producto" },
     galeria: [
-      { src: grafica2, alt: "Composición óptica en blanco y negro, estudio 2", titulo: "", texto: "" },
-      { src: grafica3, alt: "Composición óptica en blanco y negro, estudio 3", titulo: "", texto: "" },
+      {
+        src: mesaContexto1,
+        alt: "Mesa Fold It en contexto, zona de café",
+        titulo: "En contexto",
+        texto: "La mesa en contexto — zona de café.",
+      },
+      { src: mesaContexto2, alt: "Mesa Fold It en contexto, sala de estar", titulo: "", texto: "" },
     ],
   },
 ];
