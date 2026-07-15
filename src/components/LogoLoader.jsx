@@ -35,7 +35,9 @@ export default function LogoLoader({ className = "" }) {
           <div className="ar-burst b3"><span /></div>
           <div className="ar-burst b4"><span /></div>
           <div className="ar-burst b5"><span /></div>
-          <img className="ar-icon" src={logoWhite} alt="" aria-hidden="true" />
+          <div className="ar-icon-spin">
+            <img className="ar-icon" src={logoWhite} alt="" aria-hidden="true" />
+          </div>
         </div>
         <div className="ar-text" aria-label="ESTUDIO">
           <span className="ar-letter" aria-hidden="true">E</span>
