@@ -5,6 +5,7 @@ import logoIcon from "../assets/img/logo-icon.webp";
 
 const LINKS = [
   { href: "#estudio", label: "Estudio" },
+  { href: "#perfil", label: "Perfil" },
   { href: "#servicios", label: "Servicios" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#contacto", label: "Contacto" },
